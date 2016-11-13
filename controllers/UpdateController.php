@@ -19,7 +19,6 @@ class UpdateController extends \yii\web\Controller
     {
         $path = dirname(__FILE__) . '\..';
         $result = `git -C $path pull`;
-        $result = shell_exec('gitxx');
 	    if(preg_match('!Already up-to-date.!',$result)){
 		    $msg =['class'=>'info', 'msg'=>'Обновлений нет'];
 		}else{
