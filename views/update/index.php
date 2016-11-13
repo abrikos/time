@@ -3,22 +3,29 @@
 ?>
 <h1>Процедура обновления</h1>
 
-<h3>Первый раз:</h3>
+<h3>ТОЛЬКО в ПЕРВЫЙ РАЗ!!!:</h3>
 <pre>
     <a href="/soft/Git-2.10.1-64-bit.exe">Download 64bit  GIT to htdocs</a>
     OR
     <a href="/soft/Git-2.10.1-32-bit.exe">Download 32bit  GIT to htdocs</a>
-    EXECUTE and SETUP IT
+
+
+    GET SOURCE
     cd C:\xampp\htdocs\
-    git clone https://github.com/abrikos/time_bonus
-    cd time_bonus
+    rename time to time.original
+    git clone https://github.com/abrikos/time
+    REM time_bonus
     REM git reset  --hard origin/master
-    git pull
-    copy ..\time\db\database.db db\
-    Open link below "Alter database" on local site
+    REM git pull
+    copy time.original\db\database.db time\db\
+
+    MIGRATE DB
+    <a href="/soft/sqlite-tools-win32-x86-3150100.zip">Download 32bit  sqlite3 ZIP archive</a>
+    Extract sqlite3.exe to time\web\sqlite3.exe
+    <a href="http://localhost/update/migrate" class="btn btn-primary" target="_blank">Alter LOCAL database</a>
     OR
     #sqlite3 -init add-bonus.sql ..\db\database.db
 </pre>
 
-<a href="/update/pull" class="btn btn-primary">Pull Script changes</a>
-<a href="/update/migrate" class="btn btn-primary">Alter database</a>
+
+
