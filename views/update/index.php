@@ -25,6 +25,8 @@
     <a href="http://localhost/update/migrate" class="btn btn-primary" target="_blank">Alter LOCAL database</a>
     OR
     #sqlite3 -init add-bonus.sql ..\db\database.db
+
+    <h2 class="text-danger">RESTART WINDOWS</h2> FOR git enable for apache
 </pre>
 
 
