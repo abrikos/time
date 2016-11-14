@@ -105,7 +105,7 @@ class Haircut extends \yii\db\ActiveRecord
 		    $button_class = 'glyphicon-pencil';
 	    }
 
-        return "xx<div id='container-haircut-{$haircut->id}'>
+        return "<div id='container-haircut-{$haircut->id}'>
 $input 
     <span class='btn btn-xs btn-default glyphicon $button_class' style='float: right' onclick='haircutDialog({$haircut->id},$archive)'></span>
     <!--span class='btn btn-xs btn-default glyphicon glyphicon-trash' style='float: right' onclick='haircutRemove({$haircut->id})'></span-->

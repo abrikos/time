@@ -38,7 +38,7 @@ class HaircutController extends \yii\web\Controller
         $card = $haircut->card0;
         if(!$card) return false;
         $bonus = new Bonus();
-        $bonus->card = $card->id;
+        //$bonus->card = $card->id;
         $bonus->haircut = $haircut->id;
         $bonus->date = time();
         $bonus->price = $card->bonusPrice($haircut->price);
