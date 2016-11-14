@@ -97,7 +97,7 @@ class Haircut extends \yii\db\ActiveRecord
         $haircut = $this;
         $isBonus = $haircut->bonus ? ' hasBonus ' : '';
         //$isDiscount = $haircut->discount ? ' hasDiscount ' : '';
-        $input = (0) ? "<span class='price-input $isBonus' onclick='alert(\"Возможно только удаление\")' data-id='{$haircut->id}'>xx{$this->price}</span>" : "<input value='{$haircut->price}' class='price-input $isBonus' onchange='saveHaircutPrice(this)' data-id='{$haircut->id}' id='haircut-price-{$haircut->id}'/>";
+        $input = (0) ? "<span class='price-input $isBonus' onclick='alert(\"Возможно только удаление\")' data-id='{$haircut->id}'>{$this->price}</span>" : "<input value='{$haircut->price}' class='price-input $isBonus' onchange='saveHaircutPrice(this)' data-id='{$haircut->id}' id='haircut-price-{$haircut->id}'/>";
 	    $archive = $haircut->shift->finished_at*1;
 	    if($archive){
 		    $button_class = 'glyphicon-eye-open';
@@ -105,7 +105,7 @@ class Haircut extends \yii\db\ActiveRecord
 		    $button_class = 'glyphicon-pencil';
 	    }
 
-        return "<div id='container-haircut-{$haircut->id}'>
+        return "xx<div id='container-haircut-{$haircut->id}'>
 $input 
     <span class='btn btn-xs btn-default glyphicon $button_class' style='float: right' onclick='haircutDialog({$haircut->id},$archive)'></span>
     <!--span class='btn btn-xs btn-default glyphicon glyphicon-trash' style='float: right' onclick='haircutRemove({$haircut->id})'></span-->
