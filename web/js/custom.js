@@ -6,3 +6,12 @@ function siteUpdate() {
 		console.log(json)
 	})
 }
+
+function bonusesDelete() {
+	if(confirm('Удалить все бонусы?')){
+		$.getJSON('/card/bonuses-delete',function (json) {
+			alert(json.result);
+			document.location.href = '/'
+		})
+	}
+}

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\VarDumper;
 
 /**
  * This is the model class for table "card".
@@ -74,6 +75,21 @@ class Card extends \yii\db\ActiveRecord
     public function getDiscount()
     {
         return $this->hasMany(Discount::className(),['haircut'=>'id'])->via('haircuts')->sum('price');
+	}
+
+	public function beforeDelete()
+	{
+		if (parent::beforeDelete()) {
+			foreach ($this->bonuses as $model){
+				$model->delete();
+			}
+			foreach ($this->discounts as $model){
+				$model->delete();
+			}
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

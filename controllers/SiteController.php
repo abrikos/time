@@ -49,9 +49,14 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionGetTotalTable()
+    public function actionGetTotalTable($id=null)
     {
-        $shift = Shift::getCurrent();
+	    if($id){
+		    $shift = Shift::findOne($id);
+	    }else{
+		    $shift = Shift::getCurrent();
+	    }
+
         return json_encode($shift->totalTable);
     }
 

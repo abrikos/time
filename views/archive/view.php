@@ -46,7 +46,7 @@ $this->title = 'Архив';
 
 		</div>
 	</div>
-
+<input id="shift-id" value="<?=$shift->id?>" type="hidden"/>
 	<div class="col-sm-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">

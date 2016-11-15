@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Bonus;
+use app\models\Discount;
 use Yii;
 use app\models\Card;
 use app\models\CardSearch;
@@ -43,6 +45,13 @@ class CardController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
+    }
+
+	public function actionBonusesDelete()
+	{
+		Bonus::deleteAll();
+		Discount::deleteAll();
+		return Json::encode(['result'=>'Все бонусы удалены']);
     }
 
 	public function actionData($number)

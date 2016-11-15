@@ -24,7 +24,8 @@ class ArchiveAsset extends AssetBundle
     public $js = [
         //'js/detail-haircut.js',
 	    'js/tmpl.min.js',
-        'js/haircut.js'
+        'js/haircut.js',
+	    'js/shift.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

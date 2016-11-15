@@ -19,11 +19,11 @@ $(function () {
 		$('.new-material').find('input[name=name]').focus()
 	})
 
-	redrawTotalTable();
+	redrawTotalTable($('#shift-id').val());
 })
 
-function redrawTotalTable() {
-	$.get('/site/get-total-table', null, function(result) {
+function redrawTotalTable(id) {
+	$.get('/site/get-total-table', {id:id}, function(result) {
 		var body = $('<tbody id="total-table">');
 
 		$.each(result.rowname,function (rowid,row) {

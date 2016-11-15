@@ -47,7 +47,12 @@ AppAsset::register($this);
                 ],
             ],
             ['label' => 'Архив', 'url' => ['/archive']],
-            ['label' => 'Обновление', 'url' => ['/update/pull']],
+            ['label' => 'Инструменты',
+	            'items'=>[
+		            ['label' => 'Обновление', 'url' => ['/update/pull']],
+		            ['label' => 'Удалить бонусы', 'url' => 'javascript:bonusesDelete()']
+	            ]
+            ],
             ['label' => 'Графики', 'url' => ['/graphs'], 'visible' => false],
         ],
     ]);
