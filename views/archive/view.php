@@ -14,9 +14,9 @@ $this->title = 'Архив';
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				Смена №<?= $shift->id ?> от <?= $shift->startedAt ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				Касса: <span class="final-cash"><?= $shift->finalCash ?></span> руб. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				Клиенты: <span class="client-count"><?= $shift->clientCount ?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				Администратору: <span class="administrator-payment"><?= $shift->administratorPayment ?></span>
+				Касса: <span class="final-cash-archive"><?= $shift->finalCash ?></span> руб. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Клиенты: <span class="client-count-archive"><?= $shift->clientCount ?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Администратору: <span class="administrator-payment-archive"><?= $shift->administratorPayment ?></span>
 			</div>
 			<table id="shift-table" class="panel-body table table-condensed table-bordered">
 				<thead><tr>
