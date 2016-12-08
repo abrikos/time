@@ -63,7 +63,7 @@ class HaircutController extends \yii\web\Controller
         //$haircut->old_price = $haircut->price;
         $discount = new Discount();
         $discount->date = time();
-        $discount->card = $card->id;
+        //$discount->card = $card->id;
         $discount->haircut = $haircut->id;
         $discount->price = $reduce;
         $discount->save();
